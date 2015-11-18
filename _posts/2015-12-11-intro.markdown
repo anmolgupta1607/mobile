@@ -1,0 +1,13 @@
+---
+layout: nav
+title:  "Introduction to Snapdeal Ads"
+---
+
+<p >
+Snapdeal ad platform  is a comprehensive ad serving platform that streamlines your ad management, whether you deliver ads to websites, mobile webpages, mobile apps, games, or a combination.<br/><br/>
+
+    <strong>Snapdeal advertising forcuses Advanced forecasting</strong> to give you a better service on Ad delivery so as to reach out to many new customers and also pursue the customer to buy the product.<br/><br/>
+
+    <strong>Total revenue management optimization services</strong> provided by  snapdeal Advertising helps the advertisers in delivering right advertisements to the right customers, thereby optimizing the ad delivery and increasing the ROI.
+
+</p>

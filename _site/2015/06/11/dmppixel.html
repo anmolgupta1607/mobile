@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Snapdeal Ads</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <style>
+
+ #ytplayer{ 
+        height:390px; width:640px; display: block;
+        opacity: 0;
+    }
+
+        #carousel {
+ width:     1288px;
+    overflow:   hidden;
+    height: 180px;
+
+  }
+
+  #carousel ul {
+  
+  }
+
+  #carousel ul li {
+    width:945px;
+
+   
+   
+}
+        </style>
+        <script type="text/javascript">
+       
+      // Load the IFrame Player API code asynchronously.
+      
+      </script>
+       
+            <script type="text/javascript">
+  
+    $( document ).ready(function() {
+       
+        console.log("ready");
+        $("#carousel ul").each(function(){
+      // Set the interval to be 10 seconds
+      var t = setInterval(function(){
+        $("#carousel ul").animate({marginLeft:-1288},1000,function(){
+          // This code runs after the animation completes
+        
+          $(this).find("li:last").after($(this).find("li:first"));
+          // Now we've taken out the left-most list item, reset the margin
+         
+       
+
+            $(this).css({marginLeft:0});
+        })
+      },5000);
+    });
+
+
+
+
+    });
+
+
+
+
+        </script>
+    </head>
+    <body>
+          <div class="nav-container" >
+            <a id="top"></a>
+            <nav>
+               
+                <div class="nav-bar">
+                    <div class="module left">
+                        <a href="/home-app-landing.html">
+                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
+                            <img class="logo logo-dark" alt="Foundry" src="/img/sdlogo.png"  />
+                        </a>
+                    </div>
+                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="module-group right">
+                        <div class="module left">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/home-app-landing.html">
+                                        Home
+                                    </a>
+                   
+                                </li>
+                              
+                                <li >
+                                    <a href="/features.html">
+                                        Features
+                                    </a>
+                             
+                                </li>
+                                <li >
+                                    <a href="/faq.html">
+                                        FAQs
+                                    </a>
+                              
+                                </li>
+                                <li >
+                                    <a href="/2015/12/11/blog1.html">
+                                        Blog
+                                    </a>
+                                  
+                                </li>
+                         
+                                <li>
+                                    <a class="btn" href="/contact.html" >GET IN TOUCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of module group-->
+                </div>
+            </nav>
+        </div>
+     
+        <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3 mb-xs-24">
+                            <div class="post-snippet mb64" style="text-align:justify">
+                          
+                                <div class="post-title">
+                                    
+                                    <h4 class="inline-block">DMP Pixel Integration</h4>
+                                </div>
+                              
+                                <hr>
+                            <h6>DMP</h6>
+
+<p>Data management Platform used by Snapdeal to track user information and the action performed by them. This platform has the ability to collect, store, segment, and targetthe right customer at right time based on their preferences.</p>
+
+<h6>Advantages of DMP</h6>
+<ul>
+<li>
+ <strong>Understand your audience</strong> —  the DMP implemented tracks the user action performed on the website and stores it in the permanent data store. This data is used in focusing on each unique customer and provide tailored ads there by increasing the user engagement
+
+ </li>
+ <li>
+ <strong>Audience Extension</strong> — DMP helps in expanding the audience by ad delivery through RTB.
+ </li>
+ <li>
+ <strong>Personalization</strong> — You can use data from a DMP to personalize the ad delivery process so that right ad is delivered to right customer.
+ </li>
+ <li>
+<strong>Advanced analytics</strong> — As the amount of data collected increases the accuracy in predicting the future action of the user increases there by providing better results in prediction.
+ </li>
+ </ul>
+
+<p>DMP tracks 10 different User Actions and Data collection for each action will vary.</p>
+
+<table class="table">
+
+
+<th>Action_Id</th>
+<th>Name</th>
+<tr>
+<td>1</td>
+<td>Visiting home Page</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Visiting Category Page</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Searching for a product</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Visiting Product Description Page</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Adding Product to cart</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Adding Product to wishlist</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Product Purchased</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ads Viewed</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ads Clicked</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ads Converted</td>
+</tr>
+</table>
+
+<p><strong>API Link: <a href="/2015/06/11/dmppixelapi.html">DMP Pixel API</a></strong></p>
+
+<p>The below given are java script tags that is fired when a user is performing any of the above mentioned action.</p>
+
+<p>Basic Information Collected when user visits the website<br /></p>
+
+<p>User id(cookie id)- Uid<br />
+Event(event performed by the user)- Event type(values from 1-10)<br />
+Email id- email-id(if the user is logged in)<br />
+Publisher id- pid<br />
+Website id-wid<br />
+IP address<br />
+Device id<br />
+Device type<br /></p>
+
+<p>The above mentioned information are collected irrespective of any action performed by the user.<br /></p>
+
+<h6>Event 1: Home Page</h6>
+
+<p>When a user visits the home page, this pixel is embedded in the Snapdeal Home page.<br />
+<strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?action=%action_type%&amp;idfa=%device type&amp;w=%website_name%&amp;e=%email(if loggedin)&amp;p=%publisherid%&amp;page=%page_type%ip=%ip%”&gt;&lt;&amp;script&gt;</p>
+
+<p><strong>Sample Java Script Tag</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://test.snapdeal.com/pixel?prod_id=&amp;category=&amp;campaign_id=&amp;creative_id=&amp;action=1&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=pub321&amp;pval=&amp;adv=&amp;page=home&amp;asid=&amp;sids=&amp;key=&amp;aid=adid123&amp;price="&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 2: Visiting Category Page</h6>
+
+<p>This pixel is embedded in all Category and Sub-category pages of the Snapdeal site.</p>
+
+<p><strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?action=%action_type%&amp;idfa=%device type&amp;w=%website_name%&amp;e=%email(if loggedin)&amp;p=%publisherid%&amp;page=%page_type%&amp;cat=%Category%</p>
+
+<p><strong>Sample Java Script Tag</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=&amp;category=fashion&amp;campaign_id=&amp;creative_id=&amp;action=2&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=&amp;page=Category&amp;asid=&amp;sids=&amp;ip=&amp;key=&amp;aid=&amp;price="&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 3: Search action on Snapdeal site</h6>
+
+<p>This pixel is place on the product listing pages.<br />
+<strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?prod_id=%prod_id%&amp;action=%action_type%&amp;idfa=%idfa%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%ip=%ip%&amp;pval=%product_value%&amp;adv=%advertiser_id%&amp;page=%page type%&amp;key=%search_word%</p>
+
+<p><strong>Sample Javascript tags</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=&amp;category=fashion&amp;campaign_id=&amp;creative_id=&amp;action=3&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=&amp;page=Category&amp;asid=&amp;sids=&amp;ip=&amp;key=searched_product&amp;aid=&amp;price="&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 4: Visiting the Product Description Page</h6>
+
+<p>This Pixel should be embedded on every PDP page.<br /></p>
+
+<p><strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com&amp;pixel?prod_id=%prod_id%&amp;category=%category%&amp;action=%action_type%&amp;idfa=%device_id%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%</p>
+
+<p><strong>Sample Javascript tags</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&amp;category=fashion&amp;campaign_id=&amp;creative_id=&amp;action=4&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=&amp;page=PDP&amp;asid=&amp;sids=&amp;ip=&amp;key=&amp;aid=&amp;price=1000"&gt;&lt;/script&gt; 
+</code></pre>
+
+<h6>Event 5: Adding Product to cart</h6>
+
+<p><img src="/img/shopping cart.png" /></p>
+
+<p>This pixel is placed in the shopping cart page.<br />
+<strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?prod_id=%prod_id%&amp;category=%category%&amp;action=%action_type%&amp;idfa=%device_id%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%&amp;sid=%seller_Code%</p>
+
+<p><strong>Sample Javascript tags</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&amp;category=fashion&amp;campaign_id=&amp;creative_id=&amp;action=5&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=&amp;page=&amp;asid=&amp;sids=&amp;ip=&amp;key=&amp;aid=&amp;price=1000"&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 6: Adding Product to shortlist</h6>
+
+<p><img src="/img/Shortlist.png" /></p>
+
+<p>This pixel is embedded in the shortlist page.<br />
+<strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?prod_id=%prod_id%&amp;category=%category%&amp;action=%action_type%&amp;idfa=%device_id%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%&amp;sid=%seller_Code%</p>
+
+<p><strong>Sample Java Script tag</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&amp;category=fashion&amp;campaign_id=&amp;creative_id=&amp;action=6&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=&amp;page=&amp;asid=&amp;sids=&amp;ip=&amp;key=&amp;aid=&amp;price=1000"&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 7: Product Purchased</h6>
+
+<p><img src="/img/shopping cart.png" /><br />
+<strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?prod_id=%prod_id%&amp;category=%category%&amp;campaign_id=%campaign_id%ip=%ip%&amp;idfa=%idfa%&amp;oid=%order_id%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%&amp;page=%page type%&amp;price=%price_of_product%.</p>
+
+<p><strong>Sample Java Script tag</strong></p>
+
+<p>This pixel is embedded in the Thank You  page of snapdeal site</p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&amp;category=fashion&amp;campaign_id=&amp;creative_id=&amp;action=7&amp;impressions_served=&amp;converted=&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=1234&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=&amp;page=&amp;asid=&amp;sids=&amp;ip=&amp;key=&amp;aid=&amp;price=1000"&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 8: Ad Viewed</h6>
+
+<p><strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?prod_id=%prod_id%&amp;category=%category%&amp;campaign_id=%campaign_id%&amp;creative_id=%creative_id%&amp;action=%action%&amp;impressions_served=%impressions_served%&amp;converted=%boolean_if_converted%&amp;idfa=%idfa%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%&amp;adv=%advertiser_id%&amp;page=%page type%sids=%seller_code%</p>
+
+<p><strong>Sample Javascript tag</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=&amp;category=fashion&amp;campaign_id=1&amp;creative_id=101&amp;action=8&amp;impressions_served=1&amp;converted=f&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=1234&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=123&amp;page=homepage&amp;asid=1005&amp;sids=sl1234&amp;ip=&amp;key=&amp;aid=&amp;price="&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 9: Ad Clicked</h6>
+<p><strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com/pixel?prod_id=%prod_id%&amp;category=%category%&amp;campaign_id=%campaign_id%&amp;creative_id=%creative_id%&amp;action=%action%&amp;impressions_served=%impressions_served%&amp;converted=%boolean_if_converted%&amp;idfa=%idfa%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%&amp;adv=%advertiser_id%&amp;page=%page type%&amp;key=%search_word%sids=%seller_code%&amp;price=%price_of_product%.</p>
+
+<p><strong>Sample Java Script tag</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&amp;category=fashion&amp;campaign_id=1&amp;creative_id=101&amp;action=9&amp;impressions_served=1&amp;converted=f&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=1234&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=123&amp;page=homepage&amp;asid=1005&amp;sids=sl1234&amp;ip=&amp;key=&amp;aid=&amp;price="&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Event 10: Ad Converted</h6>
+<p><strong>Template URL</strong></p>
+
+<p>http://test.snapdeal.com&amp;pixel?prod_id=%prod_id%&amp;category=%category%&amp;campaign_id=%campaign_id%&amp;creative_id=%creative_id%&amp;action=%action%&amp;impressions_served=%impressions_served%&amp;converted=%boolean_if_converted%&amp;last_purchase_category=%category%&amp;idfa=%idfa%&amp;oid=%order_id%&amp;w=%website_name%&amp;e=%email(if logged in)&amp;p=%publisher%&amp;pval=%product_value%&amp;adv=%advertiser_id%&amp;page=%page type%&amp;key=%search_word%sids=%seller_code%&amp;price=%price_of_product%.</p>
+
+<p><strong>Sample Java Script tag</strong></p>
+
+<pre><code>&lt;script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&amp;category=fashion&amp;campaign_id=1&amp;creative_id=101&amp;action=8&amp;impressions_served=1&amp;converted=f&amp;global_category=&amp;last_purchase_category=&amp;idfa=tst&amp;customer_ltv=&amp;exchanges=&amp;oid=1234&amp;w=snapdeal.com&amp;e=test@t.com&amp;p=1&amp;adv=123&amp;page=homepage&amp;asid=1005&amp;sids=sl1234&amp;ip=&amp;key=&amp;aid=&amp;price="&gt;&lt;/script&gt;
+</code></pre>
+
+<h6>Response time of DMP</h6>
+
+<table class="table">
+	<th>No. of requests</th>
+	<th>No. of concurrent users</th>
+	<th>Requests per second</th>
+	<th>Time per request</th>
+	<th>Time per request</th>
+	<th>Failed requests</th>
+	<tr>
+	<td>100</td>
+	<td>10</td>
+	<td>493.66/sec</td>
+	<td>20.57[ms]</td>
+	<td>2.026[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>1000</td>
+	<td>100</td>
+	<td>2944.88/sec</td>
+	<td>33.957[ms]</td>
+	<td>0.34[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>5000</td>
+	<td>500</td>
+	<td>5018.9/sec</td>
+	<td>99.623[ms]</td>
+	<td>0.199[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>10000</td>
+	<td>1000</td>
+	<td>6095.98/sec</td>
+	<td>164.042[ms]</td>
+	<td>0.164[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>100000</td>
+	<td>10000</td>
+	<td>6293.11/sec</td>
+	<td>1589.039[ms]</td>
+	<td>0.159[ms]</td>
+	<td>0</td>
+	</tr>
+
+
+
+
+</table>
+
+                            </div>
+                            <!--end of post snippet-->
+                            <hr>
+                         
+                            <!--end of comments-->
+                        </div>
+                        <!--end of nine col-->
+                        <div class="col-md-3 col-md-pull-9 hidden-sm">
+                           
+                            <!--end of widget-->
+                            <div class="widget">
+                                <h6 class="title">Documentation</h6>
+                                <hr>
+                                <p>
+                                     Welcome to Snapdeal Ads! We want to make sure you feel comfortable getting around our ads platform. Take a few minutes to explore the documentation.
+                                </p>
+                            </div>
+                            <!--end of widget-->
+                           
+                             <div class="widget" >
+                                <h6 class="title">Introduction</h6>
+                                <hr>
+                                <ul class="menu">
+                               <!--    
+  <li style="width:255px !important">
+    <a href="/2015/12/11/typesofads.html">
+    
+      Types of Ads served
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/intro.html">
+    
+      Introduction to Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/blog1.html">
+    
+      Introducing Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/11/16/glossary.html">
+    
+      Glossary
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/10/11/metrics.html">
+    
+      Metrics Measured
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/similarrelated.html">
+    
+      Similar and Related Products
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productapi.html">
+    
+      Product and Banner Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productads.html">
+    
+      Product Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixelapi.html">
+    
+      DMP Pixel API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixel.html">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselapi.html">
+    
+      Carousel Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselads.html">
+    
+      Carousel Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/bannerads.html">
+    
+      Banner Ads 
+    </a>
+  </li>
+ 
+   -->
+    <li style="width:255px !important">
+    <a href="/2015/12/11/intro.html">
+    
+      Introduction to Snapdeal Ads
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/12/11/typesofads.html">
+    
+      Types of Ads
+    </a>
+  </li>
+   <li style="width:255px !important">
+    <a href="/2015/10/11/metrics.html">
+    
+      Metrics Measured
+    </a>
+  </li>
+    
+                                  
+                                </ul>
+                            </div>
+
+                            <div class="widget" >
+                                <h6 class="title">Ad-serving Integration</h6>
+                                <hr>
+                                <ul class="menu">
+                               <!--    
+  <li style="width:255px !important">
+    <a href="/2015/12/11/typesofads.html">
+    
+      Types of Ads served
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/intro.html">
+    
+      Introduction to Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/blog1.html">
+    
+      Introducing Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/11/16/glossary.html">
+    
+      Glossary
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/10/11/metrics.html">
+    
+      Metrics Measured
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/similarrelated.html">
+    
+      Similar and Related Products
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productapi.html">
+    
+      Product and Banner Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productads.html">
+    
+      Product Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixelapi.html">
+    
+      DMP Pixel API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixel.html">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselapi.html">
+    
+      Carousel Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselads.html">
+    
+      Carousel Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/bannerads.html">
+    
+      Banner Ads 
+    </a>
+  </li>
+ 
+   -->
+    <li style="width:255px !important">
+    <a href="/2015/06/11/productads.html">
+    
+      Product Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/carouselads.html">
+    
+      Carousel Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/bannerads.html">
+    
+      Banner Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/similarrelated.html">
+    
+      Similar and Related Products
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixel.html">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+ 
+                                  
+                                </ul>
+                            </div>
+
+                            <div class="widget" style="margin-top:120px">
+                                <h6 class="title">API Specifications</h6>
+                                <hr>
+                                <ul class="menu">
+                                 
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productapi.html">
+    
+      Product Ads Api
+    </a>
+  </li>
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselapi.html">
+    
+      Carousel Ads Api
+    </a>
+  </li>
+   <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixelapi.html">
+    
+      DMP Pixel Api
+    </a>
+  </li><br/><br/>
+   <li style="width:255px !important">
+    <a href="/2015/11/16/glossary.html">
+    
+      Glossary
+    </a>
+  </li>
+ 
+                                  
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                       
+                            <!--end of widget-->
+                        </div>
+                        <!--end of sidebar-->
+                    </div>
+                    <!--end of container row-->
+                </div>
+                <!--end of container-->
+            </section>
+  <footer class="footer-1 bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h3>Snapdeal Ads</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Recent Posts</h6>
+                                <hr>
+                            
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Important Links</h6>
+                                <hr>
+                                 <ul class="link-list recent-posts">
+                                    <li>
+                                        <a href="/home-app-landing.html">Home</a>
+                                        
+                                    </li>
+                                   
+                                    <li>
+                                        <a href="/features.html">Features</a>
+                                       
+                                    </li>
+                                    <li>
+                                        <a href="/faq.html">FAQs</a>
+                                        
+                                    </li>
+                                     <li>
+                                        <a href="/2015/12/11/blog1.html">Blog</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="/Termsofuse.html">Terms and Conditions </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="/privacypolicy.html">Privacy Policy</a>
+                                        
+                                    </li>
+                                                    <li >
+                                  
+                                    <a href="/2015/12/11/intro.html">
+    
+     Help
+    </a>
+                                  
+                                </li>
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                   
+                    </div>
+                    <!--end of row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!--end of container-->
+                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+            </footer>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

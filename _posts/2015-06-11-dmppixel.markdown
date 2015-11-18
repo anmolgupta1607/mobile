@@ -1,0 +1,281 @@
+---
+layout: nav
+title:  "DMP Pixel Integration"
+---
+
+
+
+<h6>DMP</h6>
+
+Data management Platform used by Snapdeal to track user information and the action performed by them. This platform has the ability to collect, store, segment, and targetthe right customer at right time based on their preferences.
+
+<h6>Advantages of DMP</h6>
+<ul>
+<li>
+ <strong>Understand your audience</strong> —  the DMP implemented tracks the user action performed on the website and stores it in the permanent data store. This data is used in focusing on each unique customer and provide tailored ads there by increasing the user engagement
+
+ </li>
+ <li>
+ <strong>Audience Extension</strong> — DMP helps in expanding the audience by ad delivery through RTB.
+ </li>
+ <li>
+ <strong>Personalization</strong> — You can use data from a DMP to personalize the ad delivery process so that right ad is delivered to right customer.
+ </li>
+ <li>
+<strong>Advanced analytics</strong> — As the amount of data collected increases the accuracy in predicting the future action of the user increases there by providing better results in prediction.
+ </li>
+ </ul>
+
+DMP tracks 10 different User Actions and Data collection for each action will vary.
+
+<table class="table">
+
+
+<th>Action_Id</th>
+<th>Name</th>
+<tr>
+<td>1</td>
+<td>Visiting home Page</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Visiting Category Page</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Searching for a product</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Visiting Product Description Page</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Adding Product to cart</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Adding Product to wishlist</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Product Purchased</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ads Viewed</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ads Clicked</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ads Converted</td>
+</tr>
+</table>
+ 
+ <strong>API Link: [DMP Pixel API]({% post_url 2015-06-11-dmppixelapi %})</strong>
+
+The below given are java script tags that is fired when a user is performing any of the above mentioned action.
+
+Basic Information Collected when user visits the website<br/>
+
+User id(cookie id)- Uid<br/>
+Event(event performed by the user)- Event type(values from 1-10)<br/>
+Email id- email-id(if the user is logged in)<br/>
+Publisher id- pid<br/>
+Website id-wid<br/>
+IP address<br/>
+Device id<br/>
+Device type<br/>
+
+The above mentioned information are collected irrespective of any action performed by the user.<br/>
+
+<h6>Event 1: Home Page</h6>
+
+When a user visits the home page, this pixel is embedded in the Snapdeal Home page.<br/>
+<strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?action=%action_type%&idfa=%device type&w=%website_name%&e=%email(if loggedin)&p=%publisherid%&page=%page_type%ip=%ip%"><&script>
+
+<strong>Sample Java Script Tag</strong>
+
+	<script async="true" type="text/javascript" src="http://test.snapdeal.com/pixel?prod_id=&category=&campaign_id=&creative_id=&action=1&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=&w=snapdeal.com&e=test@t.com&p=pub321&pval=&adv=&page=home&asid=&sids=&key=&aid=adid123&price="></script>
+
+
+<h6>Event 2: Visiting Category Page</h6>
+
+This pixel is embedded in all Category and Sub-category pages of the Snapdeal site.
+
+<strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?action=%action_type%&idfa=%device type&w=%website_name%&e=%email(if loggedin)&p=%publisherid%&page=%page_type%&cat=%Category%
+
+<strong>Sample Java Script Tag</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=&category=fashion&campaign_id=&creative_id=&action=2&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=&w=snapdeal.com&e=test@t.com&p=1&adv=&page=Category&asid=&sids=&ip=&key=&aid=&price="></script>
+
+<h6>Event 3: Search action on Snapdeal site</h6>
+
+This pixel is place on the product listing pages.<br/>
+<strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?prod_id=%prod_id%&action=%action_type%&idfa=%idfa%&w=%website_name%&e=%email(if logged in)&p=%publisher%ip=%ip%&pval=%product_value%&adv=%advertiser_id%&page=%page type%&key=%search_word%
+
+ 
+
+<strong>Sample Javascript tags</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=&category=fashion&campaign_id=&creative_id=&action=3&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=&w=snapdeal.com&e=test@t.com&p=1&adv=&page=Category&asid=&sids=&ip=&key=searched_product&aid=&price="></script>
+
+<h6>Event 4: Visiting the Product Description Page</h6>
+
+This Pixel should be embedded on every PDP page.<br/>
+
+<strong>Template URL</strong>
+
+ 
+
+http://test.snapdeal.com&pixel?prod_id=%prod_id%&category=%category%&action=%action_type%&idfa=%device_id%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%
+
+ 
+
+<strong>Sample Javascript tags</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&category=fashion&campaign_id=&creative_id=&action=4&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=&w=snapdeal.com&e=test@t.com&p=1&adv=&page=PDP&asid=&sids=&ip=&key=&aid=&price=1000"></script> 
+
+<h6>Event 5: Adding Product to cart</h6>
+
+
+<img src="{{ site.baseurl }}/img/shopping cart.png">
+
+
+This pixel is placed in the shopping cart page.<br/>
+<strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?prod_id=%prod_id%&category=%category%&action=%action_type%&idfa=%device_id%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%&sid=%seller_Code%
+
+<strong>Sample Javascript tags</strong>
+
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&category=fashion&campaign_id=&creative_id=&action=5&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=&w=snapdeal.com&e=test@t.com&p=1&adv=&page=&asid=&sids=&ip=&key=&aid=&price=1000"></script>
+
+
+<h6>Event 6: Adding Product to shortlist</h6>
+
+<img src="{{ site.baseurl }}/img/Shortlist.png">
+
+
+This pixel is embedded in the shortlist page.<br/>
+<strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?prod_id=%prod_id%&category=%category%&action=%action_type%&idfa=%device_id%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%&sid=%seller_Code%
+
+<strong>Sample Java Script tag</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&category=fashion&campaign_id=&creative_id=&action=6&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=&w=snapdeal.com&e=test@t.com&p=1&adv=&page=&asid=&sids=&ip=&key=&aid=&price=1000"></script>
+
+
+<h6>Event 7: Product Purchased</h6>
+
+
+<img src="{{ site.baseurl }}/img/shopping cart.png"><br/>
+<strong>Template URL</strong>
+
+ 
+
+http://test.snapdeal.com/pixel?prod_id=%prod_id%&category=%category%&campaign_id=%campaign_id%ip=%ip%&idfa=%idfa%&oid=%order_id%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%&page=%page type%&price=%price_of_product%.
+
+ 
+
+<strong>Sample Java Script tag</strong>
+
+This pixel is embedded in the Thank You  page of snapdeal site 
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&category=fashion&campaign_id=&creative_id=&action=7&impressions_served=&converted=&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=1234&w=snapdeal.com&e=test@t.com&p=1&adv=&page=&asid=&sids=&ip=&key=&aid=&price=1000"></script>
+
+
+<h6>Event 8: Ad Viewed</h6>
+    
+   <strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?prod_id=%prod_id%&category=%category%&campaign_id=%campaign_id%&creative_id=%creative_id%&action=%action%&impressions_served=%impressions_served%&converted=%boolean_if_converted%&idfa=%idfa%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%&adv=%advertiser_id%&page=%page type%sids=%seller_code%
+
+<strong>Sample Javascript tag</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=&category=fashion&campaign_id=1&creative_id=101&action=8&impressions_served=1&converted=f&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=1234&w=snapdeal.com&e=test@t.com&p=1&adv=123&page=homepage&asid=1005&sids=sl1234&ip=&key=&aid=&price="></script>
+
+<h6>Event 9: Ad Clicked</h6>
+<strong>Template URL</strong>
+
+http://test.snapdeal.com/pixel?prod_id=%prod_id%&category=%category%&campaign_id=%campaign_id%&creative_id=%creative_id%&action=%action%&impressions_served=%impressions_served%&converted=%boolean_if_converted%&idfa=%idfa%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%&adv=%advertiser_id%&page=%page type%&key=%search_word%sids=%seller_code%&price=%price_of_product%.
+
+<strong>Sample Java Script tag</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&category=fashion&campaign_id=1&creative_id=101&action=9&impressions_served=1&converted=f&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=1234&w=snapdeal.com&e=test@t.com&p=1&adv=123&page=homepage&asid=1005&sids=sl1234&ip=&key=&aid=&price="></script>
+
+<h6>Event 10: Ad Converted</h6>
+<strong>Template URL</strong>
+
+http://test.snapdeal.com&pixel?prod_id=%prod_id%&category=%category%&campaign_id=%campaign_id%&creative_id=%creative_id%&action=%action%&impressions_served=%impressions_served%&converted=%boolean_if_converted%&last_purchase_category=%category%&idfa=%idfa%&oid=%order_id%&w=%website_name%&e=%email(if logged in)&p=%publisher%&pval=%product_value%&adv=%advertiser_id%&page=%page type%&key=%search_word%sids=%seller_code%&price=%price_of_product%.
+
+<strong>Sample Java Script tag</strong>
+
+	<script async="true" type="text/javascript" src="http://209.237.236.37:9778/pixel?prod_id=supc123&category=fashion&campaign_id=1&creative_id=101&action=8&impressions_served=1&converted=f&global_category=&last_purchase_category=&idfa=tst&customer_ltv=&exchanges=&oid=1234&w=snapdeal.com&e=test@t.com&p=1&adv=123&page=homepage&asid=1005&sids=sl1234&ip=&key=&aid=&price="></script>
+
+<h6>Response time of DMP</h6>
+
+
+<table class="table">
+	<th>No. of requests</th>
+	<th>No. of concurrent users</th>
+	<th>Requests per second</th>
+	<th>Time per request</th>
+	<th>Time per request</th>
+	<th>Failed requests</th>
+	<tr>
+	<td>100</td>
+	<td>10</td>
+	<td>493.66/sec</td>
+	<td>20.57[ms]</td>
+	<td>2.026[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>1000</td>
+	<td>100</td>
+	<td>2944.88/sec</td>
+	<td>33.957[ms]</td>
+	<td>0.34[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>5000</td>
+	<td>500</td>
+	<td>5018.9/sec</td>
+	<td>99.623[ms]</td>
+	<td>0.199[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>10000</td>
+	<td>1000</td>
+	<td>6095.98/sec</td>
+	<td>164.042[ms]</td>
+	<td>0.164[ms]</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td>100000</td>
+	<td>10000</td>
+	<td>6293.11/sec</td>
+	<td>1589.039[ms]</td>
+	<td>0.159[ms]</td>
+	<td>0</td>
+	</tr>
+
+
+
+
+</table>

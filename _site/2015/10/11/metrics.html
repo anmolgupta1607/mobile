@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Snapdeal Ads</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <style>
+
+ #ytplayer{ 
+        height:390px; width:640px; display: block;
+        opacity: 0;
+    }
+
+        #carousel {
+ width:     1288px;
+    overflow:   hidden;
+    height: 180px;
+
+  }
+
+  #carousel ul {
+  
+  }
+
+  #carousel ul li {
+    width:945px;
+
+   
+   
+}
+        </style>
+        <script type="text/javascript">
+       
+      // Load the IFrame Player API code asynchronously.
+      
+      </script>
+       
+            <script type="text/javascript">
+  
+    $( document ).ready(function() {
+       
+        console.log("ready");
+        $("#carousel ul").each(function(){
+      // Set the interval to be 10 seconds
+      var t = setInterval(function(){
+        $("#carousel ul").animate({marginLeft:-1288},1000,function(){
+          // This code runs after the animation completes
+        
+          $(this).find("li:last").after($(this).find("li:first"));
+          // Now we've taken out the left-most list item, reset the margin
+         
+       
+
+            $(this).css({marginLeft:0});
+        })
+      },5000);
+    });
+
+
+
+
+    });
+
+
+
+
+        </script>
+    </head>
+    <body>
+          <div class="nav-container" >
+            <a id="top"></a>
+            <nav>
+               
+                <div class="nav-bar">
+                    <div class="module left">
+                        <a href="/home-app-landing.html">
+                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
+                            <img class="logo logo-dark" alt="Foundry" src="/img/sdlogo.png"  />
+                        </a>
+                    </div>
+                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="module-group right">
+                        <div class="module left">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/home-app-landing.html">
+                                        Home
+                                    </a>
+                   
+                                </li>
+                              
+                                <li >
+                                    <a href="/features.html">
+                                        Features
+                                    </a>
+                             
+                                </li>
+                                <li >
+                                    <a href="/faq.html">
+                                        FAQs
+                                    </a>
+                              
+                                </li>
+                                <li >
+                                    <a href="/2015/12/11/blog1.html">
+                                        Blog
+                                    </a>
+                                  
+                                </li>
+                         
+                                <li>
+                                    <a class="btn" href="/contact.html" >GET IN TOUCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of module group-->
+                </div>
+            </nav>
+        </div>
+     
+        <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3 mb-xs-24">
+                            <div class="post-snippet mb64" style="text-align:justify">
+                          
+                                <div class="post-title">
+                                    
+                                    <h4 class="inline-block">Metrics Measured</h4>
+                                </div>
+                              
+                                <hr>
+                            <p><strong>Impressions –</strong> It is the number of times your ad is displayed. <br /></p>
+
+<p><strong>Clicks – </strong>Number of clicks on an ad unit. This does not count whether the user has visited the landing page or not. <br /></p>
+
+<p><strong>Conversions -</strong> This metrics measures the number of purchases that happened through the ad delivery. This metric can be measured at seller level, Campaign level and Creative level. <br /></p>
+
+<p><strong>Conversion Rate-</strong></p>
+
+<p>The average number of conversions per ad click, shown as a percentage. Conversion rates are calculated by simply taking the number of conversions and dividing that by the number of total ad clicks that can be tracked to a conversion during the same time period.</p>
+
+<p>For example, if you had 50 conversions from 1,000 clicks, your conversion rate would be 5%, since 50 ÷ 1,000 = 5%.</p>
+
+<p><strong>CTR (Click though rate) –</strong> It is the number of Clicks generated per impression of an ad served. This number is expressed as a percentage</p>
+
+<pre><code>                                         CTR = (click/impressions)*100%
+</code></pre>
+
+<p>The Snapdeal Ad system predicts the CTR of an ad and deliver the Ad with high CTR so that probability of user getting converted is high.</p>
+
+<p>Snapdeal Ad system considers the following variable as independent variable to predict CTR<br />
+    Ad space<br />
+    Advertiser Id<br />
+    Operating system<br />
+    Browser<br />
+    City<br />
+    Time stamp (Hour, weekday)<br />
+    Website targeting<br />
+    Ad space targeting<br />
+    Advertiser name<br />
+    Advertiser type<br />
+    Campaign start time<br />
+    Campaign end time<br /></p>
+
+<p><strong>Ad Rank-</strong> This is the cumulative score measured for each ads which considers many parameters.<br />
+    <strong>Bid price:</strong> The price offered by the advertisers to publish the ads.<br />
+    <strong>CTR:</strong> The expected CTR will be considered while calculating the ad rank, if the expected CTR is high then higher value is assigned to this parameter.(with respect to user)<br />
+    <strong>Historical CTR:</strong> CTR of the campaign in the past.<br />
+    <strong>Quality of the Landing page:</strong> It measures the relevancy of the ads to the publisher site, But with respect to snapdeal as a publisher it is not considered while calculating the Ad ranks.<br />
+    Ad format and quality of the creative: not applicable as the template is provided.<br />
+    <strong>Seller Quality:</strong> The ratings provided to the individual sellers.<br />
+    <strong>Goals:</strong> The goals to be achieved by the campaign e.g Click goals(1000clicks/day
+    Based on the goals the campaigns are prioritized.<br />
+    <strong>Priority:</strong> This parameter is a user provided input it is scaled as mentioned below<br />
+    Exclusive<br />
+    High<br />
+    Standard<br />
+    Low<br />
+    Pricing: A normalized pricing process for CPC,CPM and CPA.
+    Eg. a 1000 CPM campaign equals to 10 CPC for a 10% CTR rate
+    OR we find an effective CPM rate for all campaigns 
+    Time between similar or same ads displayed.
+    Similar product ads displayed on the page.
+    Competitor ads on the same page</p>
+
+<p><strong>View-ability metrics :</strong> The metric is measured in as a percentage of ad that is visible to the user.(not implemented)</p>
+
+<p><strong>eCPM (effective Cost Per Mille):</strong> eCPM is a performance indicator. It indicates how much revenue is generated for the advertiser, on average, per 1000 impressions. In short it is earnings divided by the number of impressions, multiplied by 1000.</p>
+
+
+                            </div>
+                            <!--end of post snippet-->
+                            <hr>
+                         
+                            <!--end of comments-->
+                        </div>
+                        <!--end of nine col-->
+                        <div class="col-md-3 col-md-pull-9 hidden-sm">
+                           
+                            <!--end of widget-->
+                            <div class="widget">
+                                <h6 class="title">Documentation</h6>
+                                <hr>
+                                <p>
+                                     Welcome to Snapdeal Ads! We want to make sure you feel comfortable getting around our ads platform. Take a few minutes to explore the documentation.
+                                </p>
+                            </div>
+                            <!--end of widget-->
+                           
+                             <div class="widget" >
+                                <h6 class="title">Introduction</h6>
+                                <hr>
+                                <ul class="menu">
+                               <!--    
+  <li style="width:255px !important">
+    <a href="/2015/12/11/typesofads.html">
+    
+      Types of Ads served
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/intro.html">
+    
+      Introduction to Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/blog1.html">
+    
+      Introducing Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/11/16/glossary.html">
+    
+      Glossary
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/10/11/metrics.html">
+    
+      Metrics Measured
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/similarrelated.html">
+    
+      Similar and Related Products
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productapi.html">
+    
+      Product and Banner Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productads.html">
+    
+      Product Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixelapi.html">
+    
+      DMP Pixel API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixel.html">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselapi.html">
+    
+      Carousel Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselads.html">
+    
+      Carousel Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/bannerads.html">
+    
+      Banner Ads 
+    </a>
+  </li>
+ 
+   -->
+    <li style="width:255px !important">
+    <a href="/2015/12/11/intro.html">
+    
+      Introduction to Snapdeal Ads
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/12/11/typesofads.html">
+    
+      Types of Ads
+    </a>
+  </li>
+   <li style="width:255px !important">
+    <a href="/2015/10/11/metrics.html">
+    
+      Metrics Measured
+    </a>
+  </li>
+    
+                                  
+                                </ul>
+                            </div>
+
+                            <div class="widget" >
+                                <h6 class="title">Ad-serving Integration</h6>
+                                <hr>
+                                <ul class="menu">
+                               <!--    
+  <li style="width:255px !important">
+    <a href="/2015/12/11/typesofads.html">
+    
+      Types of Ads served
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/intro.html">
+    
+      Introduction to Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/12/11/blog1.html">
+    
+      Introducing Snapdeal Ads
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/11/16/glossary.html">
+    
+      Glossary
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/10/11/metrics.html">
+    
+      Metrics Measured
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/similarrelated.html">
+    
+      Similar and Related Products
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productapi.html">
+    
+      Product and Banner Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productads.html">
+    
+      Product Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixelapi.html">
+    
+      DMP Pixel API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixel.html">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselapi.html">
+    
+      Carousel Ads API
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselads.html">
+    
+      Carousel Ads 
+    </a>
+  </li>
+ 
+  
+  <li style="width:255px !important">
+    <a href="/2015/06/11/bannerads.html">
+    
+      Banner Ads 
+    </a>
+  </li>
+ 
+   -->
+    <li style="width:255px !important">
+    <a href="/2015/06/11/productads.html">
+    
+      Product Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/carouselads.html">
+    
+      Carousel Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/bannerads.html">
+    
+      Banner Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/similarrelated.html">
+    
+      Similar and Related Products
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixel.html">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+ 
+                                  
+                                </ul>
+                            </div>
+
+                            <div class="widget" style="margin-top:120px">
+                                <h6 class="title">API Specifications</h6>
+                                <hr>
+                                <ul class="menu">
+                                 
+  <li style="width:255px !important">
+    <a href="/2015/06/11/productapi.html">
+    
+      Product Ads Api
+    </a>
+  </li>
+  <li style="width:255px !important">
+    <a href="/2015/06/11/carouselapi.html">
+    
+      Carousel Ads Api
+    </a>
+  </li>
+   <li style="width:255px !important">
+    <a href="/2015/06/11/dmppixelapi.html">
+    
+      DMP Pixel Api
+    </a>
+  </li><br/><br/>
+   <li style="width:255px !important">
+    <a href="/2015/11/16/glossary.html">
+    
+      Glossary
+    </a>
+  </li>
+ 
+                                  
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                       
+                            <!--end of widget-->
+                        </div>
+                        <!--end of sidebar-->
+                    </div>
+                    <!--end of container row-->
+                </div>
+                <!--end of container-->
+            </section>
+  <footer class="footer-1 bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h3>Snapdeal Ads</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Recent Posts</h6>
+                                <hr>
+                            
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Important Links</h6>
+                                <hr>
+                                 <ul class="link-list recent-posts">
+                                    <li>
+                                        <a href="/home-app-landing.html">Home</a>
+                                        
+                                    </li>
+                                   
+                                    <li>
+                                        <a href="/features.html">Features</a>
+                                       
+                                    </li>
+                                    <li>
+                                        <a href="/faq.html">FAQs</a>
+                                        
+                                    </li>
+                                     <li>
+                                        <a href="/2015/12/11/blog1.html">Blog</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="/Termsofuse.html">Terms and Conditions </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="/privacypolicy.html">Privacy Policy</a>
+                                        
+                                    </li>
+                                                    <li >
+                                  
+                                    <a href="/2015/12/11/intro.html">
+    
+     Help
+    </a>
+                                  
+                                </li>
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                   
+                    </div>
+                    <!--end of row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!--end of container-->
+                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+            </footer>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

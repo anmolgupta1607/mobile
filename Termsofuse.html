@@ -1,0 +1,511 @@
+---
+layout: default
+---
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Snapdeal Ads</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+             <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+              <script type="text/javascript" src="js/jssor.caroslider.mini.js"></script>
+        <style>
+
+            .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('img/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+
+
+          .jssorb03 {
+            position: absolute;
+        }
+        .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 21px;
+            height: 21px;
+            text-align: center;
+            line-height: 21px;
+            color: white;
+            font-size: 12px;
+            background: url('img/b03.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb03 div { background-position: -5px -4px; }
+        .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+        .jssorb03 .av { background-position: -65px -4px; }
+        .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+
+        /* jssor slider arrow navigator skin 03 css */
+        /*
+        .jssora03l                  (normal)
+        .jssora03r                  (normal)
+        .jssora03l:hover            (normal mouseover)
+        .jssora03r:hover            (normal mouseover)
+        .jssora03l.jssora03ldn      (mousedown)
+        .jssora03r.jssora03rdn      (mousedown)
+        */
+        .jssora03l, .jssora03r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('img/a03.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora03l { background-position: -3px -33px; }
+        .jssora03r { background-position: -63px -33px; }
+        .jssora03l:hover { background-position: -123px -33px; }
+        .jssora03r:hover { background-position: -183px -33px; }
+        .jssora03l.jssora03ldn { background-position: -243px -33px; }
+        .jssora03r.jssora03rdn { background-position: -303px -33px; }
+
+ #ytplayer{ 
+        height:390px; width:640px; display: block;
+        opacity: 0;
+    }
+
+        #carousel {
+ width:     1288px;
+    overflow:   hidden;
+    height: 180px;
+
+  }
+
+  #carousel ul {
+  
+  }
+
+  #carousel ul li {
+    width:945px;
+
+   
+   
+}
+        </style>
+        <script type="text/javascript">
+       
+      // Load the IFrame Player API code asynchronously.
+      
+      </script>
+       
+            <script type="text/javascript">
+  
+    $( document ).ready(function() {
+   /*    
+        console.log("ready");
+        $("#carousel ul").each(function(){
+      // Set the interval to be 10 seconds
+      var t = setInterval(function(){
+        $("#carousel ul").animate({marginLeft:-1288},1000,function(){
+          // This code runs after the animation completes
+        
+          $(this).find("li:last").after($(this).find("li:first"));
+          // Now we've taken out the left-most list item, reset the margin
+         
+       
+
+            $(this).css({marginLeft:0});
+        })
+      },5000);
+    });*/
+  
+            var jssor_3_options = {
+              $AutoPlay: true,
+              $AutoPlaySteps: 4,
+              $SlideDuration: 160,
+              $SlideWidth: 250,
+              $SlideSpacing: 3,
+              $Cols: 5,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $Steps: 4
+              },
+             
+            };
+
+
+
+  var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 1000,
+              $SlideEasing: $Jease$.$OutQuint,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+     
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+  var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider3() {
+                var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 809);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider3, 30);
+                }
+            }
+
+
+
+
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+           
+            ScaleSlider();
+      
+                 ScaleSlider3();
+            $(window).bind("load", ScaleSlider3);
+            $(window).bind("resize", ScaleSlider3);
+            $(window).bind("orientationchange", ScaleSlider3);
+
+
+
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+      
+
+
+    });
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="nav-container" style="position:relative;z-index:4" >
+            <a id="top"></a>
+            <nav>
+               
+                <div class="nav-bar">
+                    <div class="module left">
+                        <a href="home-app-landing.html">
+                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
+                            <img class="logo logo-dark" alt="Foundry" src="img/sdlogo.png"  />
+                        </a>
+                    </div>
+                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="module-group right">
+                        <div class="module left">
+                            <ul class="menu">
+                                <li>
+                                    <a href="home-app-landing.html">
+                                        Home
+                                    </a>
+                   
+                                </li>
+                              
+                                <li >
+                                    <a href="features.html">
+                                        Features
+                                    </a>
+                             
+                                </li>
+                                <li >
+                                    <a href="faq.html">
+                                        FAQs
+                                    </a>
+                              
+                                </li>
+                                <li > 
+                                <a href="{% post_url 2015-12-11-blog1 %}">
+                                        Blog
+                                    </a>
+                                  
+                                </li>
+                         
+                         
+                                <li>
+                                    <a class="btn" href="contact.html" >GET IN TOUCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of module group-->
+                </div>
+            </nav>
+        </div>
+     
+                <!--end of container-->
+        
+     
+        
+              
+         <div class="container">
+            <section class="bg-dark pt120 pb120 pt-xs-40 pb-xs-40" style="background-color:#FFF;"   >
+ <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h4 class="uppercase mb16" style="color:#0A94F7">Terms Of Use</h4>
+                         
+                        </div>
+                    </div>
+                    <br/>
+                
+
+             <p style="background-color:#f5f5f5;color:#666;padding:30px;height:100%;width:100%;text-align:justify;  white-space: pre-wrap">
+                 
+Dated: 10/11/2015
+JASPER INFOTECH PVT LTD. (“SNAPDEAL”, “COMPANY”, “WE” OR “US”), WHETHER DIRECTLY OR INDIRECTLY, OWNS AND OPERATES THE WWW.SNAPDEAL.COM WEBSITE, (COLLECTIVELY, THE “WEBSITE”). YOUR USE OF AND ACCESS TO THE WEBSITE CONSTITUTE YOUR AGREEMENT TO BE BOUND BY THESE TERMS OF SERVICE (THE “AGREEMENT”) AND ANY ADDITIONAL RULES AND GUIDELINES THAT WE POST ON THE WEBSITE. THIS AGREEMENT IS AN ELECTRONIC RECORD IN THE FORM OF AN ELECTRONIC CONTRACT FORMED UNDER INFORMATION TECHNOLOGY ACT, 2000 AND RULES MADE THEREUNDER AND THE AMENDED PROVISIONS PERTAINING TO ELECTRONIC RECORDS/DOCUMENTS IN VARIOUS STATUTES AS AMENDED BY THE INFORMATION TECHNOLOGY ACT, 2000. THIS IS A COMPUTER GENERATED ELECTRONIC RECORD/DOCUMENT AND DOES NOT REQUIRE ANY PHYSICAL, ELECTRONIC OR DIGITAL SIGNATURE. TERMS AND CONDITIONS MENTIONED IN THIS AGREEMENT ARE LEGALLY BINDING CONTRACT BETWEEN JASPER INFOTECH PVT. LTD., ("SNAPDEAL") AND THE USER ("YOU" OR "YOUR") AND DESCRIBES THE TERMS ON WHICH SNAPDEAL OFFERS YOU ACCESS OF THE WEBWEBSITE. PLEASE READ THE TERMS AND CONDITIONS MENTIONED HEREIN CAREFULLY BEFORE ACESSSING THE WEBSITE OR ANY MATERIAL, INFORMATION OR SERVICES RELATED TO THE WEBSITE. YOUR ACT OF PARTICIPATING/REGISTERING FOR WEBSITE OR, OR BY CONTINUING TO USE THE WEBSITE OR WEBSITE SERVICE OR WEBSITE CONTENT SHALL SIGNIFY YOUR ACCEPTANCE OF THE TERMS OF THE WEBSITE, UPDATED FROM TIME TO TIME. IF YOU DO NOT AGREE TO BE BOUND BY THIS AGREEMENT, THEN YOU MUST NOT USE THE WEBSITE. WE MAY CHANGE THIS AGREEMENT AT ANY TIME AND WITHOUT ANY NOTICE TO YOU. WE RECOMMEND THAT YOU PERIODICALLY VISIT THIS PAGE TO REVIEW THIS AGREEMENT. BY USING THE WEBSITE AFTER WE POST ANY CHANGES, YOU AGREE TO ACCEPT THOSE CHANGES, WHETHER OR NOT YOU ACTUALLY REVIEWED THEM.
+
+(Snapdeal and You/Your are collectively referred to as the Parties and individually as the Party wherever the context so requires.)
+Website1. Jurisdictional Issues. The Website is controlled and/or operated from India. The Website may not be appropriate or available for use in some jurisdictions outside of India. In choosing to access the Website, you do so on your own initiative and at your own risk, and you are responsible for complying with all local laws, rules and regulations. We may limit the Website's availability, in whole or in part, to any person, geographic area or jurisdiction we choose, at any time and in our sole discretion.
+2. Information Submitted Through the Website. Your submission of information through the Website is governed by the Privacy Policy of the Website (the “Privacy Policy”) which is hereby incorporated into this Agreement by this reference. You represent and warrant that any information you provide in connection with your use of the Website is and shall remain true, accurate, and complete, and that you will maintain and update such information regularly. You agree that if any information you provide is false, inaccurate, obsolete or incomplete, we may terminate your use of the Website at any time without giving prior intimation.
+3. Website Services and Content. The Website may provide you with access to certain services (the “Website Services”), and to certain content provided by us or by third parties, such as news and information regarding such products and services (the “Website Content”). In addition to the other terms and conditions of this Agreement, please carefully note the following regarding the Website Services and Website Content:
+Services. We may provide Website users with the opportunity to submit requests for information on a wide variety of products and services (each such request, a “Request”). We cannot and do not guarantee that we will provide information for every Request received or that we can in fact meet all of your requirements. We may reject any Request, for any reason or no reason.
+Content. The Website may include Website Content. We provide any such Website Content solely for your convenience, and such Website Content (i) is not intended as a substitute for professional advice; (ii) should not be construed as the provision of advice or recommendations; (iii) is not a representation or warranty regarding the services that we provided; and (iv) should not be relied upon as the basis for any decision or action. We are not responsible for the accuracy or reliability of any Website Content. Website Content is not exhaustive and should not be considered complete or up-to-date. It is your responsibility to evaluate the accuracy, completeness or usefulness of any Website Content available through the Website. The relationship between you and us is not a professional or similar relationship; always seek the advice of a qualified professional with respect to any questions that you may have, and never disregard professional advice or delay in seeking it because of something that you have read on the Website. We neither recommend nor endorse any specific products, opinions, or other Website Content that may be made available through or mentioned on the Website.
+Website Content may be provided by our employees as well as by third parties. Please note that third parties may post messages, provide materials or make statements that are inaccurate, misleading or deceptive. We, our subsidiaries, our affiliates and our and their respective employees, officers, directors, agents, representatives, licensors, suppliers, service providers, contracts and any third party relying on the Information provided by You (collectively with us, the “Company Entities”) do not endorse and are not responsible or liable for any Website Content, or any opinion, advice, information or statements in such Website Content, or your use of any Website Content. Under no circumstances will the Company Entities be liable for any loss or damage caused by your reliance on Website Content or for any results obtained by using any such Website Content. The opinions expressed in the Company Entities reflect solely the opinions of the individuals who submitted such opinions, and may not reflect our opinions. YOUR USE OF THE WEBSITE AND RELIANCE ON ANY WEBSITE CONTENT IS SOLELY AT YOUR OWN RISK.
+4. Rules of Conduct. While accessing and using the Website you will comply with all applicable laws, rules and regulations. In addition, we expect users of the Website to respect the rights and dignity of others. Your use of the Website is conditioned on your compliance with the rules of conduct set forth in this section; your failure to comply with such rules may result in termination of your access to the Website pursuant to Section 15 below and liability to us for such violation. You agree that you will not:
+Post, transmit, or otherwise make available, through or in connection with the Website:
+Anything that is or may be (a) threatening, harassing, degrading, hateful or intimidating; (b) defamatory; (c) fraudulent or tortious; (d) obscene, indecent, pornographic or otherwise objectionable; or (e) protected by copyright, trademark, trade secret, right of publicity or other proprietary right without the express prior consent of the owner of such right.
+
+Any material that would give rise to criminal or civil liability; that promotes gambling; that encourages conduct that constitutes a criminal offense; or that encourages or provides instructional information about illegal activities or activities such as “hacking,” “cracking,” or “phreaking.”
+
+Any virus, worm, Trojan horse, Easter egg, time bomb, spyware, or other computer code, file, or program that is harmful or invasive or may or is intended to damage or hijack the operation of, or to monitor the use of, any hardware, software or equipment.
+
+Any unsolicited or unauthorized advertising, promotional material, “junk mail,” “spam,” “chain letter,” “pyramid scheme” or investment opportunity, or any other form of solicitation.
+
+Any material, non-public information about a company without the proper authorization to do so.
+
+Use the Website for any fraudulent or unlawful purpose.
+
+Use the Website to defame abuse, harass, stalk, threaten or otherwise violate the legal rights of others, including without limitation others' privacy rights or rights of publicity, or harvest or collect personally identifiable information about other users of the Website.
+
+Impersonate any person or entity, including without limitation any of our (or our affiliates) representatives; falsely state or otherwise misrepresent your affiliation with any person or entity; or express or imply that we endorse any statement or posting you make.
+
+Interfere with or disrupt the operation of the Website or the servers or networks used to make the Website available; or violate any requirements, procedures, policies or regulations of such networks.
+
+Restrict or inhibit any other person from using the Website (including without limitation by hacking or defacing any portion of the Website).
+
+Use the Website to advertise or offer to sell or buy any goods or services without our express prior written consent.
+
+Reproduce, duplicate, copy, sell, resell or otherwise exploit for any commercial purposes, any portion of, use of, or access to the Website.
+
+Except as expressly permitted by applicable law, modify, adapt, translate, reverse engineer, decompile or disassemble any portion of the Website.
+
+Remove any copyright, trademark or other proprietary rights notice from the Website or materials originating from the Website.
+
+Frame or mirror any part of the Website without our express prior written consent.
+
+Create a database by systematically downloading and storing all or any Website content.
+
+Use any robot, spider, Website search/retrieval application or other manual or automatic device to retrieve, index, “scrape,” “data mine” or in any way gather Website content or reproduce or circumvent the navigational structure or presentation of the Website without our express prior written consent. Notwithstanding the immediately foregoing sentence (but subject to the other items listed above), we grant the operators of public search engines permission to use spiders to copy materials from the Website for the sole purpose of and solely to the extent necessary for creating publicly-available searchable indices of such materials, but not caches or archives of such materials. We reserve the right to revoke these exceptions, either generally or in specific cases, at any time.
+
+5. Registration; User Names and Passwords. You may be required to register with us in order to access certain services or areas of the Website. With respect to any such registration, we may refuse to grant you, and you may not use, a user name (or e-mail address) that personally identifies you; that violates the intellectual property or other rights of any person; that is offensive; or that we reject for any other reason in our sole discretion.
+Your user name and password are for your personal use only, and not for use by any other person. You are responsible for maintaining the confidentiality of any password you may use to access the Website, and agree not to transfer your password or user name, or lend or otherwise transfer your use of or access to the Website, to any third party. You are fully responsible for all interaction with the Website that occurs in connection with your password or user name. You agree to immediately notify us of any unauthorized use of your password or user name or any other breach of security related to your account or the Website, and to ensure that you “log off”/exit from your account with the Website (if applicable) at the end of each session. We are not liable for any loss or damage arising from your failure to comply with any of the foregoing obligations.
+6. Submissions. For purposes of clarity, you retain ownership of any information, content and/or materials that you submit through the Website (each, a “Submission”). Please note, however, that we need certain rights to your Submissions to be able to make them available on the Website. Accordingly, you hereby grant to Snapdeal and its subsidiaries a worldwide, non-exclusive, transferable, sub-licenseable (through multiple tiers), royalty-free, perpetual, irrevocable right and license, without compensation to you: to use, reproduce, distribute, adapt (including without limitation edit, modify, translate, and reformat), create derivative works of, transmit, publicly display, publicly perform and otherwise exploit such Submission, in any media now known or hereafter developed. For each Submission, you represent and warrant that you have all rights necessary for you to grant the licenses granted in this section, and that such Submission, and your provision thereof to and through the Website, comply with all applicable laws, rules and regulations. Further, to the extent permitted under applicable law, you irrevocably waive any “moral rights” or other rights with respect to attribution of authorship or integrity of materials regarding each Submission that you may have under any applicable law under any legal theory. We request this waiver to help ensure that we have all the rights we may need to provide the Services available through the Website. In addition, the Company Entities have no control over, and shall have no liability for, any damages resulting from the use (including without limitation republication) or misuse by any third party of information voluntarily made public through any other part of the Website. IF YOU CHOOSE TO MAKE ANY OF YOUR PERSONALLY IDENTIFIABLE OR OTHER INFORMATION PUBLICLY AVAILABLE IN A SUBMISSION, YOU DO SO AT YOUR OWN RISK
+7. Monitoring. You acknowledge and agree that we reserve the right (but have no obligation) to do any or all of the following, at our sole discretion: (a) monitor, evaluate or alter Submissions before or after they appear on the Website (including, without limitation, through the use of automated filtering software); (b) seek to verify that all rights, consents, releases and permissions in or relating to such Submission have been obtained by you in accordance with your representations above; and (c) refuse, reject or remove any Submission at any time or for any reason (including, without limitation, through the use of automated filtering software or if we determine, in our sole discretion, that all rights, consents, releases and permissions have not been obtained by you despite your representations above). You agree to cooperate with us in our verification or inquiries related to the foregoing. We may disclose any Submissions and the circumstances surrounding their transmission to anyone for any reason or purpose, and in accordance with our Privacy Policy. If you become aware of any unlawful, offensive or objectionable material(s) on the Website (except for material that infringes copyright, which is addressed in Section 19 below), contact us at with your name and address, a description of the material(s) at issue and the URL or location of such materials.
+8. Proprietary Rights. The information and materials made available through the Website (including images, data, illustrations, designs, icons, video clips, text, software, graphics, scripts, logos and other materials) are and shall remain the exclusive property of Company and its licensors and suppliers, and are protected by copyright, trademark, patent, and/or other proprietary rights and laws. Subject to your compliance with this Agreement, and solely for so long as you are permitted by us to access and use the Website, you may view one (1) copy of any content on the Website to which we provide you access hereunder on any single computer solely for your personal, non-commercial home use, provided that you keep intact all copyright and other proprietary notices. Except as expressly authorized in advance by us in writing, you agree not to reproduce, modify, rent, lease, loan, sell, distribute, or create derivative works based (whether in whole or in part) on, all or any part of the Website or any materials made available through the Website. Any rights not expressly granted in this Agreement are reserved for PubMatic.
+Company owns all trademarks and service marks, and any associated logos of Company. All trademarks and service marks on the Website not owned by us are the property of their respective owners. The trade names, trademarks and service marks owned by Company, whether registered or unregistered, may not be used in connection with any product or service that is not ours, in any manner that is likely to cause confusion. Nothing contained on the Website should be construed as granting, by implication, estoppel or otherwise, any license or right to use any trade names, trademarks or service marks without the express prior written consent of the owner of such trade names, trademarks or service marks.
+9. Purchases. We may make available products and services for purchase through the Website, and we may use third-party suppliers and service providers to enable e-commerce functionality on our Website. If you wish to purchase any product or service made available by us through the Website (each such purchase, a “Transaction”), you may be asked to supply certain information relevant to your Transaction, including without limitation your credit card number, the expiration date of your credit card, your billing address, and your shipping information. YOU REPRESENT AND WARRANT THAT YOU HAVE THE LEGAL RIGHT TO USE ANY CREDIT CARD(S) UTILIZED IN CONNECTION WITH ANY TRANSACTION. By submitting such information, you grant to Company the right to provide such information to third parties for purposes of facilitating the completion of Transactions initiated by you or on your behalf. Verification of information may be required prior to the acknowledgment or completion of any Transaction.
+All descriptions, images, references, features, content, specifications, products and prices of products and services described or depicted on this Website, are subject to change at any time without notice. Company reserves the right, with or without prior notice, to limit the available quantity of or discontinue any product or service; to honor, or impose conditions on the honoring of, any coupon, coupon code, promotional code or other similar promotions; to bar any user from making any or all Transaction(s); and/or to refuse to provide any user with any product or service. You agree to pay all charges that may be incurred by you or on your behalf through the Website, at the price(s) in effect when such charges are incurred, including without limitation all shipping and handling charges. In addition, you remain responsible for any taxes that may be applicable to your Transactions.
+10. Links. The Website may provide links to other web Websites and online resources. Because we have no control over such Websites and resources, you acknowledge and agree that the Company Entities are not responsible for the availability of such external Websites or resources, and the Company Entities neither endorse nor are responsible or liable for any content, advertising, products or other materials on or available through such Websites or resources. Other web Websites may provide links to the Website with or without our authorization. You acknowledge and agree that the Company Entities do not endorse such Websites, and are not and shall not be responsible or liable for any links from those Websites to the Website, any content, advertising, products or other materials available on or through such other Websites, or any loss or damages incurred in connection therewith.
+YOU AGREE THAT YOUR USE OF THIRD PARTY WEB WEBSITES AND RESOURCES, INCLUDING WITHOUT LIMITATION, YOUR USE OF ANY CONTENT, INFORMATION, DATA, ADVERTISING, PRODUCTS, OR OTHER MATERIALS ON OR AVAILABLE THROUGH SUCH WEB WEBSITES AND RESOURCES, IS AT YOUR OWN RISK AND IS SUBJECT TO THE TERMS AND CONDITIONS OF USE APPLICABLE TO SUCH WEBSITES AND RESOURCES.
+We shall have the right, but not the obligation, at any time and in our sole discretion, to block links from and to the Website through technological or other means without prior notice.
+11. DISCLAIMERS; LIMITATION OF LIABILITY. THE WEBSITE AND ANY GOODS, SERVICES, CONTENT, INFORMATION AND MATERIALS MADE AVAILABLE THROUGH OR IN CONNECTION WITH THE WEBSITE ARE PROVIDED TO YOU “AS IS” WITHOUT ANY EXPRESS OR IMPLIED REPRESENTATIONS OR WARRANTIES OF ANY KIND, AND EACH OF THE COMPANY ENTITIES DISCLAIMS ALL EXPRESS OR IMPLIED REPRESENTATIONS, WARRANTIES, TERMS AND CONDITIONS WITH RESPECT TO THE WEBSITE AND ALL GOODS, SERVICES, CONTENT, INFORMATION AND MATERIALS (INCLUDING WITHOUT LIMITATION, THIRD PARTY GOODS, SERVICES, CONTENT, INFORMATION AND MATERIALS) MADE AVAILABLE THROUGH THE WEBSITE, INCLUDING ANY REPRESENTATIONS OR WARRANTIES OF SATISFACTORY QUALITY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT AND TITLE. THE COMPANY ENTITIES MAKE NO REPRESENTATION OR WARRANTY THAT THE WEBSITE (OR ANY PART THEREOF) IS OR WILL BE ACCURATE, COMPLETE OR ERROR-FREE, NOR THAT ANY PARTICULAR SOFTWARE OR HARDWARE WILL BE COMPATIBLE WITH THE WEBSITE. YOU HEREBY AGREE THAT IT IS YOUR SOLE RESPONSIBILITY TO (A) OBTAIN AND PAY FOR ANY SOFTWARE, HARDWARE OR SERVICES (INCLUDING INTERNET CONNECTIVITY) NEEDED TO USE THE WEBSITE AND (B) ENSURE THAT ANY SOFTWARE, HARDWARE OR SERVICES THAT YOU USE WILL FUNCTION CORRECTLY WITH THE WEBSITE. YOU AGREE THAT YOU MUST EVALUATE, AND THAT YOU BEAR ALL RISKS ASSOCIATED WITH, THE USE OF THE WEBSITE, INCLUDING WITHOUT LIMITATION, ANY RELIANCE ON THE ACCURACY, COMPLETENESS OR USEFULNESS OF ANY MATERIALS AVAILABLE THROUGH THE WEBSITE.
+NONE OF THE COMPANY ENTITIES SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY OR PUNITIVE DAMAGES OF ANY KIND IN CONNECTION WITH THE WEBSITE, UNDER ANY CONTRACT, NEGLIGENCE, STRICT LIABILITY OR OTHER THEORY, INCLUDING WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OR INTERRUPTION OF BUSINESS, LOSS OF USE, LOSS OF DATA, LOSS OF OTHER INTANGIBLES, LOSS OF SECURITY OF INFORMATION YOU HAVE PROVIDED IN CONNECTION WITH YOUR USE OF THE WEBSITE OR UNAUTHORIZED INTERCEPTION OF ANY SUCH INFORMATION BY THIRD PARTIES, OR LOSS FROM ANY WEBSITE OR SERVICES LINKED THROUGH THE WEBSITE OR ANY COPYING, DISPLAY OR USE THEREOF, EVEN IF ADVISED IN ADVANCE OF SUCH DAMAGES OR LOSSES. YOUR SOLE AND EXCLUSIVE REMEDY FOR DISSATISFACTION WITH THE WEBSITE IS TO STOP USING THE WEBSITE.
+IT IS POSSIBLE THAT APPLICABLE LAW MAY NOT ALLOW FOR LIMITATIONS ON CERTAIN IMPLIED WARRANTIES OR EXCLUSIONS OR LIMITATIONS OF CERTAIN DAMAGES; SOLELY TO THE EXTENT THAT SUCH LAW APPLIES TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MAY HAVE ADDITIONAL RIGHTS.
+While we try to maintain the security of the Website, we do not guarantee that the Website will be secure or that any use of the Website will be uninterrupted. Additionally, third parties may make unauthorized alterations to the Website. If you become aware of any unauthorized third party alteration to the Website, contact us at with a description of the material(s) at issue and the URL or location of such material(s).
+12. Indemnity. Except to the extent prohibited under applicable law, you agree to defend, indemnify and hold harmless the Company Entities, from and against all claims, losses, costs and expenses (including attorneys' fees) arising out of (a) your use of, or activities in connection with, the Website; (b) any violation or alleged violation of this Agreement by you; (c) any use or other exploitation, or failure or omission to use or otherwise exploit, any Submission (including any portion thereof) that you post; or (d) any claim that your Submission or any use or exploitation thereof caused damage to or infringed upon or violated the rights of a third party, including without limitation past, present or future infringement, misappropriation, libel, defamation, invasion of privacy or right of publicity or violation of rights related to the foregoing.
+13. Termination. This Agreement is effective until terminated. We may, at any time and for any reason, terminate your access to or use of: (a) the Website, (b) your user name and password or (c) any files or information associated with your user name and password. Upon any such termination, your right to use the Website will immediately cease. You agree that any termination of your access to or use of the Website may be effected without prior notice, and that we may immediately deactivate or delete your password and user name, and all related information and files associated with it, and/or bar any further access to such information or files. You agree that the Company Entities shall not be liable to you or any third party for any termination of your access to the Website or to any such information or files, and shall not be required to make such information or files available to you after any such termination. Sections 1, 3, 4, 6-8, 10-14 and 16-18 shall survive any expiration or termination of this Agreement.
+14. Governing Law; Jurisdiction. This Agreement is governed by and shall be construed in accordance with the laws of India, without regard to its principles of conflicts of law. You agree to the exclusive jurisdiction of courts at New Delhi, and waive any jurisdictional, venue or inconvenient forum objections to such courts. You further agree that the United Nations Convention on the International Sale of Goods will not apply to this Agreement.
+15. Information or Complaints. If you have a question or complaint regarding the Website or the meaning of application of this Agreement, please send an email to legal@snapdeal.com. Please note that email communications will not necessarily be secure; accordingly you should not include information that you consider to be sensitive in your email correspondence with us.
+17. Ability to Enter Into This Agreement. BY USING THE WEBSITE, YOU REPRESENT AND WARRANT THAT YOU ARE EITHER: (A) OF LEGAL AGE TO ENTER INTO THIS AGREEMENT AND YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT; OR (B) THE PARENT OR LEGAL GUARDIAN OF A CHILD UNDER THE LEGAL AGE TO ENTER INTO THIS AGREEMENT AND YOU AGREE TO BE BOUND BY THIS AGREEMENT ON BEHALF OF YOUR CHILD. If you are the parent or legal guardian of a child under the legal age to enter into this Agreement, then, as used in this Agreement, “you,” “yourself,” “your,” and “user” means and refers to you on behalf of yourself and your child who is the user of the Website.
+18. Miscellaneous. This Agreement does not, and shall not be construed to, create any partnership, joint venture, employer-employee, or agency relationship between you and us. If any provision of this Agreement is found to be unlawful, void or for any reason unenforceable, that provision will be deemed severable from this Agreement and will not affect the validity and enforceability of any remaining provision. You may not assign, transfer or sublicense any or all of your rights or obligations under this Agreement without our express prior written consent. We may assign, transfer or sublicense any or all of our rights or obligations under this Agreement without restriction. No waiver by either party of any breach or default hereunder will be deemed to be a waiver of any preceding or subsequent breach or default. Any heading, caption or section title contained herein is inserted only as a matter of convenience, and in no way defines or explains any section or provision hereof. This Agreement hereby incorporates by this reference any additional terms that we post on the Website and, except as otherwise expressly stated herein, this Agreement is the entire agreement between you and us relating to the subject matter herein and supersedes any and all prior or contemporaneous written or oral agreements or understandings between you and us relating to such subject matter. Notices to you may be made via posting to the Website, or by e-mail or regular mail if you have provided such information, in our discretion. The Website may also provide notices of changes to this Agreement or other matters by displaying such notices or by providing links to such notices. Without limitation, you agree that a printed version of this Agreement and of any notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to this Agreement to the same extent and subject to the same conditions as other business documents and records originally generated and maintained in printed form. We will not be responsible for failures to fulfill any obligations due to causes beyond our control.
+
+
+             </p>
+           
+                <!--end of container-->
+            </section>
+            </div>
+           <!--  <section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40"> -->
+              <!--   <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
+                    <img alt="Screenshot" class="cast-shadow mb-xs-24" src="img/app3.jpg" />
+                </div>
+                <div class="container">
+                    <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
+                        <h3 class="mb40 mb-xs-16">Use the pre-built text and image variations to spruik cool features.</h3>
+                        <p class="lead mb40">
+                            We've built three distinct image and text combinations for you to showcase the features of your product or service.
+                        </p>
+                        <div class="feature boxed">
+                            <p>
+                                "What a sick app this is - I've been searching forever for something like this to come along - WOW"
+                            </p>
+                            <div class="spread-children">
+                                <img alt="Pic" class="image-xs" src="img/avatar1.png" />
+                                <span>Anne Bracken - Themeforest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!--end of container-->
+           <!--  </section> -->
+         
+        
+                <!--end of container-->
+          
+               <footer class="footer-1 bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h3>Snapdeal Ads</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Recent Posts</h6>
+                                <hr>
+                             
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Important Links</h6>
+                                <hr>
+                                 <ul class="link-list recent-posts">
+                                    <li>
+                                        <a href="home-app-landing.html">Home</a>
+                                        
+                                    </li>
+                                   
+                                    <li>
+                                        <a href="features.html">Features</a>
+                                       
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQs</a>
+                                        
+                                    </li>
+                                     <li>
+                                        <a href="{% post_url 2015-12-11-blog1 %}">Blog</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="Termsofuse.html">Terms and Conditions </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="privacypolicy.html">Privacy Policy</a>
+                                        
+                                    </li>
+                                          <li >
+                                  
+                                    <a href="{% post_url 2015-12-11-intro %}">
+    
+     Help
+    </a>
+                                  
+                                </li>
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                   
+                    </div>
+                    <!--end of row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!--end of container-->
+                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+            </footer>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

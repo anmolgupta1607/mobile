@@ -1,0 +1,64 @@
+---
+layout: nav
+title:  "Metrics Measured"
+---
+
+
+
+<strong>Impressions –</strong> It is the number of times your ad is displayed. <br/>
+
+<strong>Clicks – </strong>Number of clicks on an ad unit. This does not count whether the user has visited the landing page or not. <br/>
+
+<strong>Conversions -</strong> This metrics measures the number of purchases that happened through the ad delivery. This metric can be measured at seller level, Campaign level and Creative level. <br/>
+
+<strong>Conversion Rate-</strong>
+
+The average number of conversions per ad click, shown as a percentage. Conversion rates are calculated by simply taking the number of conversions and dividing that by the number of total ad clicks that can be tracked to a conversion during the same time period.
+
+For example, if you had 50 conversions from 1,000 clicks, your conversion rate would be 5%, since 50 ÷ 1,000 = 5%.
+
+<strong>CTR (Click though rate) –</strong> It is the number of Clicks generated per impression of an ad served. This number is expressed as a percentage
+                             
+                                             CTR = (click/impressions)*100%
+
+The Snapdeal Ad system predicts the CTR of an ad and deliver the Ad with high CTR so that probability of user getting converted is high.
+
+Snapdeal Ad system considers the following variable as independent variable to predict CTR<br/>
+    Ad space<br/>
+    Advertiser Id<br/>
+    Operating system<br/>
+    Browser<br/>
+    City<br/>
+    Time stamp (Hour, weekday)<br/>
+    Website targeting<br/>
+    Ad space targeting<br/>
+    Advertiser name<br>
+    Advertiser type<br>
+    Campaign start time<br>
+    Campaign end time<br>
+
+<strong>Ad Rank-</strong> This is the cumulative score measured for each ads which considers many parameters.<br/>
+    <strong>Bid price:</strong> The price offered by the advertisers to publish the ads.<br/>
+    <strong>CTR:</strong> The expected CTR will be considered while calculating the ad rank, if the expected CTR is high then higher value is assigned to this parameter.(with respect to user)<br/>
+    <strong>Historical CTR:</strong> CTR of the campaign in the past.<br/>
+    <strong>Quality of the Landing page:</strong> It measures the relevancy of the ads to the publisher site, But with respect to snapdeal as a publisher it is not considered while calculating the Ad ranks.<br/>
+    Ad format and quality of the creative: not applicable as the template is provided.<br/>
+    <strong>Seller Quality:</strong> The ratings provided to the individual sellers.<br/>
+    <strong>Goals:</strong> The goals to be achieved by the campaign e.g Click goals(1000clicks/day
+    Based on the goals the campaigns are prioritized.<br/>
+    <strong>Priority:</strong> This parameter is a user provided input it is scaled as mentioned below<br/>
+    Exclusive<br/>
+    High<br/>
+    Standard<br/>
+    Low<br/>
+    Pricing: A normalized pricing process for CPC,CPM and CPA.
+    Eg. a 1000 CPM campaign equals to 10 CPC for a 10% CTR rate
+    OR we find an effective CPM rate for all campaigns 
+    Time between similar or same ads displayed.
+    Similar product ads displayed on the page.
+    Competitor ads on the same page
+
+<strong>View-ability metrics :</strong> The metric is measured in as a percentage of ad that is visible to the user.(not implemented)
+
+<strong>eCPM (effective Cost Per Mille):</strong> eCPM is a performance indicator. It indicates how much revenue is generated for the advertiser, on average, per 1000 impressions. In short it is earnings divided by the number of impressions, multiplied by 1000.
+

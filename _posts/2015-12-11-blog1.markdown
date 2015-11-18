@@ -1,0 +1,67 @@
+---
+layout: blognav
+title:  "Introducing Snapdeal Ads"
+author: "Asif Ali"
+authordesc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem antium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "
+dated: "12 Nov"
+image: "img/amir-3.png"
+---
+
+<p class="lead">
+Snapdeal Ads is an advertising platform that will help sellers to be able to reach a much larger audience, using pay per click advertising technology. </p>
+<p>
+
+Snapdeal Ads will help you reach over 9 crore customers across our various properties and helps you get started in just a few clicks. 
+Using Snapdeal ads you can now:
+<ul class="bullets">
+<li>Reach new users in specific product categories.</li>
+<li>Reach users who may have shown interest in similar products to your products.</li>
+<li>Reach users who have bought products from Snapdeal and are more likely to buy other related products.</li>
+</ul>
+
+     
+
+ 
+
+Here are some Frequently Asked Questions (FAQs) that will help you get started: <br/><br/>
+
+ 
+
+<strong>What kind of ads do we typically run?</strong><br/>
+
+Snapdeal ads runs an ad format called Product Ads. This is very similar to the product listing except that your product will be promoted and shown higher than other similar products.<br/><br/>
+
+ 
+
+<strong>How do we charge the seller?</strong><br/>
+
+We simply debit the COD balance and transfer them to advertising credits in order to run your ad campaigns.<br/>
+
+ 
+
+Ads are charged on a Per click basis (hence the name, pay per click advertising).<br/><br/>
+
+ 
+
+<strong>Do I have to login separately to use Snapdeal ads?</strong><br/>
+
+There is no separate console for Snapdeal Ads. It is a part of your Snapdeal seller console and you can use the existing seller username and password to get started.<br/>
+
+ 
+
+ 
+
+We have setup a more FAQs for us to answer all the questions that you may have to ask at this following link.<br/><br/>
+
+ 
+
+ 
+
+ 
+
+For further questions, you’re welcome to email us at sellersonboarding@snapdeal.com<br/>
+
+ 
+
+For specific questions on the ads interface, write to us at seller-ads@snapdeal.com
+		                                </p>

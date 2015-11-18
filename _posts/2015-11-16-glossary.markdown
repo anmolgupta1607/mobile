@@ -1,0 +1,55 @@
+---
+layout: nav
+title:  "Glossary"
+---
+
+
+<strong>ad request:</strong> Communication between a web browser or application and an ad server to display an ad.<br/>
+
+<strong>ad server:</strong> A system that communicates with web browsers or applications to deliver and track ads.<br/>
+
+<strong>ad slot:</strong> The area on a web page set aside for the display of ads.<br/>
+
+<strong>ad tag:</strong> A small piece of code that defines the ad space where ads display on a website. It includes parameters that describe the inventory advertising campaigns can target, which may in turn display ads in the ad space.<br/>
+
+<strong>audience targeting:</strong> Targeting of specific audience segments, such as an age demographic, These information is stored in Data management platform. <br/>
+
+<strong>banner:</strong> This is an ad that appears on a web page which is typically hyperlinked to an advertiser’s website. Banners can be images (JPEG, PNG), <br/>
+
+<strong>campaign:</strong> A collection of related creatives with common advertising purpose and booking requirements. <br/>
+
+<strong>click:</strong> A user action, such as clicking an ad with their mouse or touching the screen of a mobile device, which sends them to a click-through URL while Snapdeal Advertisingn Platform records the event. <br/>
+
+<strong>click through:</strong> The action of clicking an ad and being taken to another web page via a hyperlink.<br/>
+
+<strong>click-through URL:</strong> A destination website address that a viewer goes to when they click on an ad.<br/>
+
+<strong>clicks:</strong> The number of click throughs having occurred as a result of a user clicking on an ad and being redirected to an advertiser’s page.<br/>
+
+<strong>conversion:</strong> The measure of the number of times that a tracker has been displayed that has been successfully linked to a previous creative impression or click, according to the tracker’s rules.<br/>
+
+<strong>conversion rate:</strong> The percentage of visitors to a website who sign up for advertised offers or buy advertised products. Proven high conversion ratios (via web analytics) add value to a website’s inventory.<br/>
+
+<strong>conversion tag:</strong> A small piece of code that tracks how users respond to the ads that serve for the orders they are associated with.<br/>
+
+<strong>cookies:</strong> Small text files sent from a web server to a browser, then returned by the browser each time it logs on to that server. Advertisers use cookies to monitor the number of ads that have been shown to a visitor, while they are used by websites to gauge numbers of unique visitors.<br/>
+
+<strong>CPA:</strong> Cost per action, a pricing method which calculates cost based on the number of times a user takes action based on an ad (conversions).<br/>
+
+<strong>CPC:</strong> Cost per click, a pricing method which calculates cost based on the number of times a user clicks on an ad.<br/>
+
+<strong>CPD:</strong> Cost per day, a payment model where advertisers pay on a daily basis for their ads to be displayed on a particular website.<br/>
+
+<strong>CPL:</strong> Cost per lead, a payment model determined by the number of website visitors who clicked on a particular ad. Prices range, on average, from $1-$10. AKA “pay per lead (PPL)” or “cost per inquiry (CPI).”<br/>
+
+<strong>CPM:</strong> Cost per mille, a pricing method which calculates cost based on the number of impressions (per 1000).<br/>
+
+<strong>creative:</strong> The media asset associated with an ad, such as an image or video file.<br/>
+
+<strong>CTR:</strong> Click-through rate, the percentage of impressions that results in a click through. For example if a banner was clicked on 87 times after being shown 1000 times, it would have a CTR or click-through rate of .087 or 8.7% (87/1000 = 0.087×100 = 8.7).<br/>
+
+<strong>Dayparting</strong>:Configuring day and time settings for line items. The process of dividing the day into different parts in order to run ads during at specific times only.<br/>
+
+<strong>native ad:</strong> An advertisement designed to blend in with the appearance and tone of the editorial content it runs alongside.<br/>
+
+Feature that helps to limit how often an ad from a line item is served to the same user, specify the number of impressions that will be delivered to a single user in a specific period of time, specify time ranges in minutes, hours, days, weeks, or months and apply multiple rules. For example, you can set a frequency cap limiting the same user to one impression per day and three impressions per week.

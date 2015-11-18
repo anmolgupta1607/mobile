@@ -1,0 +1,536 @@
+---
+layout: default
+---
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Snapdeal Ads</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+             <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+              <script type="text/javascript" src="js/jssor.caroslider.mini.js"></script>
+        <style>
+
+            .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('img/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+
+
+          .jssorb03 {
+            position: absolute;
+        }
+        .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 21px;
+            height: 21px;
+            text-align: center;
+            line-height: 21px;
+            color: white;
+            font-size: 12px;
+            background: url('img/b03.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb03 div { background-position: -5px -4px; }
+        .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+        .jssorb03 .av { background-position: -65px -4px; }
+        .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+
+        /* jssor slider arrow navigator skin 03 css */
+        /*
+        .jssora03l                  (normal)
+        .jssora03r                  (normal)
+        .jssora03l:hover            (normal mouseover)
+        .jssora03r:hover            (normal mouseover)
+        .jssora03l.jssora03ldn      (mousedown)
+        .jssora03r.jssora03rdn      (mousedown)
+        */
+        .jssora03l, .jssora03r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('img/a03.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora03l { background-position: -3px -33px; }
+        .jssora03r { background-position: -63px -33px; }
+        .jssora03l:hover { background-position: -123px -33px; }
+        .jssora03r:hover { background-position: -183px -33px; }
+        .jssora03l.jssora03ldn { background-position: -243px -33px; }
+        .jssora03r.jssora03rdn { background-position: -303px -33px; }
+
+ #ytplayer{ 
+        height:390px; width:640px; display: block;
+        opacity: 0;
+    }
+
+        #carousel {
+ width:     1288px;
+    overflow:   hidden;
+    height: 180px;
+
+  }
+
+  #carousel ul {
+  
+  }
+
+  #carousel ul li {
+    width:945px;
+
+   
+   
+}
+        </style>
+        <script type="text/javascript">
+       
+      // Load the IFrame Player API code asynchronously.
+      
+      </script>
+       
+            <script type="text/javascript">
+  
+    $( document ).ready(function() {
+   /*    
+        console.log("ready");
+        $("#carousel ul").each(function(){
+      // Set the interval to be 10 seconds
+      var t = setInterval(function(){
+        $("#carousel ul").animate({marginLeft:-1288},1000,function(){
+          // This code runs after the animation completes
+        
+          $(this).find("li:last").after($(this).find("li:first"));
+          // Now we've taken out the left-most list item, reset the margin
+         
+       
+
+            $(this).css({marginLeft:0});
+        })
+      },5000);
+    });*/
+  
+            var jssor_3_options = {
+              $AutoPlay: true,
+              $AutoPlaySteps: 4,
+              $SlideDuration: 160,
+              $SlideWidth: 250,
+              $SlideSpacing: 3,
+              $Cols: 5,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$,
+                $Steps: 4
+              },
+             
+            };
+
+
+
+  var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 1000,
+              $SlideEasing: $Jease$.$OutQuint,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+     
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+  var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider3() {
+                var refSize = jssor_3_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 809);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider3, 30);
+                }
+            }
+
+
+
+
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+           
+            ScaleSlider();
+      
+                 ScaleSlider3();
+            $(window).bind("load", ScaleSlider3);
+            $(window).bind("resize", ScaleSlider3);
+            $(window).bind("orientationchange", ScaleSlider3);
+
+
+
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+      
+
+
+    });
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="nav-container" style="position:relative;z-index:4" >
+            <a id="top"></a>
+            <nav>
+               
+                <div class="nav-bar">
+                    <div class="module left">
+                        <a href="home-app-landing.html">
+                            <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
+                            <img class="logo logo-dark" alt="Foundry" src="img/sdlogo.png"  />
+                        </a>
+                    </div>
+                    <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="module-group right">
+                        <div class="module left">
+                            <ul class="menu">
+                                <li>
+                                    <a href="home-app-landing.html">
+                                        Home
+                                    </a>
+                   
+                                </li>
+                              
+                                <li >
+                                    <a href="features.html">
+                                        Features
+                                    </a>
+                             
+                                </li>
+                                <li >
+                                    <a href="faq.html">
+                                        FAQs
+                                    </a>
+                              
+                                </li>
+                                <li > 
+                                <a href="{% post_url 2015-12-11-blog1 %}">
+                                        Blog
+                                    </a>
+                                  
+                                </li>
+                         
+                         
+                                <li>
+                                    <a class="btn" href="contact.html" >GET IN TOUCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of module group-->
+                </div>
+            </nav>
+        </div>
+     
+        <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-md-push-3 mb-xs-24">
+                            <div class="post-snippet mb64">
+                                    <div class="post-title">
+                                    
+                                            <h4 class="inline-block">Introduction to Snapdeal Advertising</h4>
+                                </div>
+                       <hr>
+                               
+                                <p class="lead">
+                                   The Snapdeal Advertising platform caters to the need of the Sellers and Brand to reach out to the customers through Ad delivery. It provides customized ad delivery to user there by pursuing them to buy the product they are interested in. It adopts a data driven method to deliver ads there by  
+
+The Snapdeal Advertising aims to increase the ROI for Sellers through Ad delivery.
+                                </p>
+                                <p>
+                                   <h6> Performance Terms Summary</h6>
+
+    <strong>Ad Request:</strong> An ad request occurs when a user's requests an ad from us. There is one request per ad slot on a given user interface.<br/>
+
+    <strong>Impression:</strong> An impression is generated every time an ad is delivered and the user is exposed to it.<br/>
+    <strong>Click:</strong> The act of clicking on an ad that has been served.<br/>
+    <strong>Conversion:</strong>  An Conversion is generated every time when purchase happens through ad delivery. <br/>
+    <strong>CPM (Cost Per Mille):</strong> CPM ads, also known as CPI (Cost Per Impression), are paying per impression. Such campaigns are formed on the basis of what it pays to show the ad to one thousand viewers. <br/>
+    <strong>CPC (Cost Per Click):</strong> The price an advertiser pays for each click on their ad
+    CTR (Click Through Rate): The percentage of overall impressions that resulted in a click on an advertisement.<br/>
+    <strong>eCPM (effective Cost Per Mille):</strong> eCPM is a performance indicator. It indicates how much revenue is generated for the advertiser, on average, per 1000 impressions. In short it is earnings divided by the number of impressions, multiplied by 1000.
+                                </p>
+                              
+                            </div>
+                            <!--end of post snippet-->
+                            <hr>
+                         
+                            <!--end of comments-->
+                        </div>
+                        <!--end of nine col-->
+                        <div class="col-md-3 col-md-pull-9 hidden-sm">
+                            
+                            <!--end of widget-->
+                            <div class="widget">
+                                <h6 class="title">Documentation</h6>
+                                <hr>
+                                <p>
+                                    Welcome to Snapdeal Ads! We want to make sure you feel comfortable getting around our ads platform. Take a few minutes to explore the documentation.
+                                </p>
+                            </div>
+
+                              <div class="widget">
+                               <a href="{% post_url 2015-12-11-typesofads %}"><h6 class="title">Types Of Ads</h6></a>
+                        
+                               <hr>
+                            </div>
+                            <!--end of widget-->
+                    <div class="widget" >
+                                <h6 class="title">Ad-serving Integration</h6>
+                                <hr>
+                                <ul class="menu">
+                               <!--    {% for post in site.posts %}
+  <li style="width:255px !important">
+    <a href="{{ post.url }}">
+    
+      {{ post.title }}
+    </a>
+  </li>
+ 
+  {% endfor %} -->
+    <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-productads %}">
+    
+      Product Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-carouselads %}">
+    
+      Carousel Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-bannerads %}">
+    
+      Banner Ads 
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-similarrelated %}">
+    
+      Similar and Related Products
+    </a>
+  </li>
+    <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-dmppixel %}">
+    
+      DMP Pixel Integration
+    </a>
+  </li>
+  <li style="width:255px !important">
+    <a href="{% post_url 2015-10-11-metrics %}">
+    
+      Metrics Measured
+    </a>
+  </li>
+                                  
+                                </ul>
+                            </div>
+
+                            <div class="widget" style="margin-top:120px">
+                                <h6 class="title">API Specifications</h6>
+                                <hr>
+                                <ul class="menu">
+                                 
+  <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-productapi %}">
+    
+      Product Ads Api
+    </a>
+  </li>
+  <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-carouselapi %}">
+    
+      Carousel Ads Api
+    </a>
+  </li>
+   <li style="width:255px !important">
+    <a href="{% post_url 2015-06-11-dmppixelapi %}">
+    
+      DMP Pixel Api
+    </a>
+  </li>
+ 
+                                  
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                       
+                            <!--end of widget-->
+                        </div>
+                        <!--end of sidebar-->
+                    </div>
+                    <!--end of container row-->
+                </div>
+                <!--end of container-->
+            </section>
+     <footer class="footer-1 bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h3>Snapdeal Ads</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Recent Posts</h6>
+                                <hr>
+                            
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h6 class="title">Important Links</h6>
+                                <hr>
+                                 <ul class="link-list recent-posts">
+                                    <li>
+                                        <a href="home-app-landing.html">Home</a>
+                                        
+                                    </li>
+                                   
+                                    <li>
+                                        <a href="features.html">Features</a>
+                                       
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQs</a>
+                                        
+                                    </li>
+                                     <li>
+                                        <a href="{% post_url 2015-12-11-blog1 %}">Blog</a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="Termsofuse.html">Terms and Conditions </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="privacypolicy.html">Privacy Policy</a>
+                                        
+                                    </li>
+                                          <li >
+                                  
+                                    <a href="{% post_url 2015-12-11-intro %}">
+    
+     Help
+    </a>
+                                  
+                                </li>
+                                </ul>
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                   
+                    </div>
+                    <!--end of row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <span class="sub">&copy; Copyright 2015 - Snapdeal</span>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!--end of container-->
+                <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+            </footer>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flickr.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
